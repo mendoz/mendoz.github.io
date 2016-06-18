@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="style.css" type="text/css" rel="stylesheet">
+		<title>Add movie to database</title>
+	</head>
+	<body>
+        <h6 id="amount">$0.00</h6>
+        <h6 id="balance">Balance: </h6>
+        <div id="ddd">
+            <form name="bankForm" id="bankForm">
+                <label id="dl" for="deposit">Deposit: </label>
+                <input type="number" name="deposit" id="deposit" placeholder="Amount" min='1'/>
+            </form>
+        </div>
+        <h3 id="addMovie">Add Movie to Database</h3>
+        
+            <form name="newMovieForm" id="newMovieForm">
+            <div id="form">
+                <label for="movieTitle">Movie Title:</label><br />
+                <input type="text" name="movieTitle" id="movieTitle" placeholder="Enter a Movie Title" width='500' required />
+                <br />
+                <label for="runTime">Run Time:</label><br />
+                <input type="number" name="runTime" id="runTime" placeholder="Run Time in Minutes" min="1" required />
+                <br />
+                <label for="yearReleased">Year Released:</label><br />
+                <input type="number" name="yearReleased" id="yearReleased" placeholder="Year Released" min="1900" max="2016" required />
+                <div id="genre">
+                    <label for="comedy">Comedy:</label>
+                        <input type="radio" name="genre" id="comedy" value="Comedy" checked /> 
+                    <label for="drama">Drama:</label>  
+                        <input type="radio" name="genre" value="Drama" id="drama"/>
+                    <label for="horror">Horror:</label>  	
+                        <input type="radio" name="genre" value="Horror" id='horror'/>
+                </div>
+
+                <textarea name="desc" placeholder="Plot description"></textarea>
+                <br />
+                <input type="submit" value="Add Movie" />
+            </div>
+            </form>
+        
+        
+        <div id='nmHeader'>
+            <h4>New movies:</h4>
+            <select id='selectsort'>
+                <option value="nameA">Name &uarr;</option>
+                <option value="nameD">Name &darr;</option>
+                <option value="yearA">Year &uarr;</option>
+                <option value="yearD">Year &darr;</option>
+                <option value="genreA">Genre &uarr;</option>
+                <option value="genreD">Genre &darr;</option>
+                <option value="priceA">Price &uarr;</option>
+                <option value="priceD">Price &darr;</option>
+                <option value="lengthA">Length &uarr;</option>
+                <option value="lengthD">Length &darr;</option>
+                <option value="availableA">Available &uarr;</option>
+                <option value="availableD">Available &darr;</option>
+            </select>
+            <label id='sortlabel'>Sort:</label>
+        </div>
+	</body>
+    
+    <script src="element.js" type="text/javascript"></script>
+     <script src="movie.js" type="text/javascript"></script>
+     <script src="movieapp.js" type="text/javascript"></script>
+</html>
